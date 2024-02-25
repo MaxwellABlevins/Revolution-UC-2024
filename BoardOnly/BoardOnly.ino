@@ -36,7 +36,7 @@ void setup() {
 void loop() {
   if (digitalRead(buttonPin) == HIGH ){
     assignUserToRandomLocation();
-    delay(1000); // Debouncing delay
+    delay(500); // Debouncing delay
   }
 }
 
@@ -66,7 +66,7 @@ void assignUserToRandomLocation() {
     display.setCursor(0, 0);
     display.println("Assigned to:");
     display.println(locations[selectedLocationIndex].name);
-    display.print("Occupancy");
+    display.print("Occupancy: ");
     display.println(locations[selectedLocationIndex].occupancy);
     display.display();
   }
